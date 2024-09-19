@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript / ejemplo 20</title>
+    <script>
+        function Procesar(){
+            //obtener valor de la edad//
+            let xe = document.getElementById("txtEdad").value;
+            //procesar//
+        if(xe >= 18){
+            document.getElementById("txtRes").value="Mayor de Edad";
+            document.getElementById("txtRes").style.color="blue";    
+        }else{
+            document.getElementById("txtRes").value="Menor de Edad"; 
+            document.getElementById("txtRes").style.color="red"; 
+            }   
+       }
+        function Limpiar(){
+            document.getElementById("txtEdad").value="";
+            document.getElementById("txtRes").value="";
+            //focalizar -> ubicar en el objeto//
+            document.getElementById("txtEdad").focus();
+        }
+       function Cerrar(){
+        window.close;
+       }
+    </script>
+</head>
+<body>
+    
+    <h1>Evaluar edad</h1>
+    <hr>
+    <h3>Ingresar edad</h3>
+    <input type="text" name=""id="txtEdad">
+    <br>
+    <input type="text" name="" id="txtRes">
+    <br>
+    <input onclick="Procesar();" type="button" value="Calcular">
+    <input onclick="Limpiar();" type="button" value="Limpiar">
+    <input onclick="Cerrar();" type="button" value="Salir">
+</body>
+</html>
